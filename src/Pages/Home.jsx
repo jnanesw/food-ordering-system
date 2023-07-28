@@ -27,11 +27,11 @@ const Home = ()=>{
                 Response.map((item, index)=>(
                     <ul className="home-items" key={index}>
                         <li>
-                            <span>
-                                <img src={item.strCategoryThumb} alt="img"/>
-                                <p>{item.strCategory}</p>
-                                <p>Description: {item.strCategoryDescription}</p>
-                                <p>Price: {(index+1)*100}</p>
+                            <span className="total-content-home">
+                                <img src={item.strCategoryThumb} alt="img" className="item-image"/>
+                                <p className="item-name">{item.strCategory}</p>
+                                {/* <p>Description: {item.strCategoryDescription.slice(0,50)+"..."}</p> */}
+                                <p className="item-name">Price: {(index+1)*100}</p>
                             </span>
                         </li>
                     </ul>
