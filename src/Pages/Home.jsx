@@ -22,7 +22,7 @@ const Home = ()=>{
         fetchData();
       }, []);
     return(
-        <div>
+        <div className="home-items-list">
             {
                 Response.map((item, index)=>(
                     <ul className="home-items" key={index}>
@@ -31,6 +31,7 @@ const Home = ()=>{
                                 <img src={item.strCategoryThumb} alt="img"/>
                                 <p>{item.strCategory}</p>
                                 <p>Description: {item.strCategoryDescription}</p>
+                                <p>Price: {(index+1)*100}</p>
                             </span>
                         </li>
                     </ul>

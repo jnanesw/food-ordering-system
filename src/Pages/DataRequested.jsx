@@ -1,17 +1,17 @@
 
 import { useEffect, useState } from "react";
-
+import ExtractPrice from "../Components/ExtractPrice";
 const DataRequested = ({search})=>{
-    var url = "https://api.spoonacular.com/food/search?apiKey=31acdd66710542f383c420ea61c5d494&query="
-    const jsonString = JSON.stringify(search);
-    console.log(jsonString)
-    url=url+jsonString
-    console.log(url)
+
     const [Response, SetResponse] = useState([]);
 
+    // const apiKey1="31acdd66710542f383c420ea61c5d494"
+    const apiKey2="d1f70067f78248078e71a58983a18e5f"
+    var url = `https://api.spoonacular.com/food/search?apiKey=${apiKey2}&query=${search}`;
+    console.log(url)
 
-    const Extract = async (search)=>{
-        const response = await fetch(url+search)
+    const Extract = async (url)=>{
+        const response = await fetch(url)
         try{
             if(response.ok){
                 const data = await response.json()
@@ -27,10 +27,14 @@ const DataRequested = ({search})=>{
     }
 
     useEffect(() => {
-        Extract(search);
-      },[search]);
+        if(search!== undefined){
+            Extract(url);
+        }
+      },[search, url]);
+    
 
     console.log("Data From outside: ",Response)
+    // var link=""
     return(
         <div>
             <div className="requested-data">
@@ -42,8 +46,7 @@ const DataRequested = ({search})=>{
                             <div  key={index} className="requested-list">
                                 <img src={result.image} alt="img" />
                                 <h1>{result.name}</h1>
-                                <h2>Price: {(index+1)*(100)}</h2>
-                                <p>{result.content}</p>
+                                <p>Price:{<ExtractPrice Id={result.id} />}</p>
                             </div>
                         ))
                     ))
