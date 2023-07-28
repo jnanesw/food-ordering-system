@@ -1,13 +1,57 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar{
+    @apply text-black h-20 px-2 py-1 rounded flex justify-end
+}
+.content{
+    @apply flex justify-center content-center sm:mr-[5%] mt-[3%] md:mt-[1%] md:text-xl
+}
+.lists{
+    @apply flex justify-center content-center
+}
+.user-confirm{
+    @apply flex justify-between sm:mr-[15%]
+}
+.navbar-list{
+    @apply sm:mr-[15%]
+}
+.list{
+    @apply sm:mr-[8%] hover:bg-black hover:text-white sm:w-14 px-2 sm:rounded-sm 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.details{
+    @apply ml-[5%]  hover:bg-black hover:text-white sm:w-16 px-2 h-8 sm:rounded-sm
+}
+
+/* `````````````````````````````````````````````````````````````````````````````````` */
+
+.home-items{
+    @apply flex mt-[5%]
+}
+
+/* `````````````````````````````````````````````````````````````````````````````````````````` */
+
+.Fastsearch{
+    @apply w-[100%] flex mt-[5%]
+}
+.Fastsearch div span{
+    @apply sm:text-sm md:text-xl ml-[9%]
+}
+
+#fast-items-image{
+    @apply rounded-2xl w-[40%] h-[80%] 
+}
+.requested-data{
+    @apply mt-[5%]
+}
+.requested-list{
+    @apply mx-[26%] 
+}
+.requested-list img{
+    @apply rounded-xl
+}
+.requested-data-lists{
+    @apply flex w-[8%]  
 }
