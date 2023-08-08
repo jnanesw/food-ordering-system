@@ -10,17 +10,19 @@ const Header = ()=>{
                         <li className="list"><Link to="/">Home</Link></li>
                         <li className="list"><Link to="/menu" > Menu</Link></li>
                         <li className="list"><Link to="/about-us"> About</Link></li>
-                        <li className="list"><Link to="contact-us">Contact</Link></li>
+                        <li className="list"><Link to="/contact-us">Contact</Link></li>
                     </ul>
                     
                 </div>
                 <div className="user-confirm">
-                    <span className="details"><ShoppingBagOutlinedIcon /></span>
+                    <span className="details"><Link to="/add-to-cart" ><ShoppingBagOutlinedIcon /></Link></span>
                     <p className="details"> Login</p>
                     <p className="details">SignUp</p>
                     
                 </div>
+
             </div>
+
         </header>
     )
 }

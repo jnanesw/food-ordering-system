@@ -6,8 +6,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        'bungee': ['Bungee Spice', 'cursive'],
         'playfair': ['Playfair Display', 'serif'],
-        'luman': ['Lumanosimo', 'cursive']
+        'luman': ['Lumanosimo', 'cursive'],
+        'sora': ['Sora', 'sans-serif'],
+      },
+      backgroundImage:{
+        'glass': ["./src/assets/bg-glass.jpg"]
       }
     },
   },

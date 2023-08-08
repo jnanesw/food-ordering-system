@@ -2,10 +2,11 @@ import { useEffect, useState } from "react"
 
 
 const ExtractPrice = ({Id})=>{
-    const [Price, SetPrice] = useState(0);
+    const [Price, SetPrice] = useState('');
 
     // const apiKey1="31acdd66710542f383c420ea61c5d494"
-    const apiKey2="d1f70067f78248078e71a58983a18e5f"
+    const apiKey2="933fb57e83404fb6a4fa1f6735058652"
+    // const apiKey3 = "e1bfe1687e084970bb0af00e14f593e9"
     const PriceUrl = `https://api.spoonacular.com/recipes/${Id}/priceBreakdownWidget.json?apiKey=${apiKey2}`
 
     const Fetch = async ()=>{
@@ -13,11 +14,12 @@ const ExtractPrice = ({Id})=>{
             const responsePrice = await fetch(PriceUrl);
             if(responsePrice.ok){
                 let data=await responsePrice.json();
+                console.log("Inside Try price: ", data.totalCost)
                 SetPrice(data.totalCost)
-                console.log(data)
+                console.log("Data: ",data)
             }
             else{
-                console.log("Error inside TRY")
+                console.log("Error inside TRY", Id)
             }
         }
         catch(error){
@@ -25,8 +27,11 @@ const ExtractPrice = ({Id})=>{
         }
     }
     useEffect(()=>{
-        Fetch(Id);
-    },[Id])
+        Fetch();
+    },[])
+    if(Price === undefined || Price<=0){
+        return 300
+    }
     return Price;
 }
 

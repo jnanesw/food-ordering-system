@@ -1,22 +1,22 @@
 import {useState } from "react";
 import DataRequested from "./DataRequested";
-import Home from "./Home"
+// import Home from "./Home"
 import pizza from "../assets/pizza.jpg"
 import burger from "../assets/burger.jpg"
 import cake from "../assets/cake.jpg"
 import chicken from "../assets/chicken.jpg"
 import sweet from "../assets/sweet.jpg"
 import SearchIcon from '@mui/icons-material/Search';
-const Menu = ()=>{
+const Menu = ({SetcartItems})=>{
     const [Search, SetSearch] = useState("");
     const [ShowData, setShowData] = useState(false);
     const Update = (event)=>{
         console.log(event.target.value)
         SetSearch(event.target.value)
     }
-    const handleSearch = () => {
-        setShowData(true);
-    };
+    // const handleSearch = () => {
+    //     setShowData(true);
+    // };
     const UpdateFastSearsch = (event)=>{
         let content;
         if (event.target.tagName === "SPAN") {
@@ -43,28 +43,28 @@ const Menu = ()=>{
                 </div>
             </div>
             <div className="Fastsearch">
-                <div onClick={UpdateFastSearsch} className="fastsearch-items">
+                <div onClick={UpdateFastSearsch} className="fastsearch-items cursor-pointer">
                     <img src={pizza} alt="img" id="fast-items-image" />
                     <span className="fast-items-text">Pizza</span>
                 </div>
-                <div onClick={UpdateFastSearsch} className="fastsearch-items">
+                <div onClick={UpdateFastSearsch} className="fastsearch-items cursor-pointer">
                     <img src={burger} alt="img" id="fast-items-image" />
                     <span className="fast-items-text">Burger</span>
                 </div>
-                <div onClick={UpdateFastSearsch} className="fastsearch-items">
+                <div onClick={UpdateFastSearsch} className="fastsearch-items cursor-pointer">
                     <img src={chicken} alt="img" id="fast-items-image" />
                     <span className="fast-items-text">Chicken</span>
                 </div>
-                <div onClick={UpdateFastSearsch}>
+                <div onClick={UpdateFastSearsch} className="fastsearch-items cursor-pointer">
                     <img src={cake} alt="img" id="fast-items-image" />
                     <span className="fast-items-text">Cake</span>
                 </div>
-                <div onClick={UpdateFastSearsch} className="fastsearch-items">
+                <div onClick={UpdateFastSearsch} className="fastsearch-items cursor-pointer">
                     <img src={sweet} alt="img" id="fast-items-image" />
                     <span className="fast-items-text">Sweet</span>
                 </div>
             </div>
-            <div>{Search.length>0? ShowData && <DataRequested search={Search} />: <Home />}</div>
+            <div>{Search.length>0? ShowData && <DataRequested search={Search} SetCartItems={SetcartItems} />: <DataRequested search={""} SetCartItems={SetcartItems} />}</div>
         </div>
     )
 }

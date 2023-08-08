@@ -1,9 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lumanosimo&family=Playfair+Display:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@200&display=swap');
 .navbar{
-    @apply text-black h-20 px-2 py-1 rounded flex justify-end
+    @apply font-bungee text-black h-20 px-2 py-1 rounded flex justify-end
 }
 .content{
     @apply flex justify-center content-center sm:mr-[5%] mt-[3%] md:mt-[1%] md:text-xl
@@ -18,15 +19,23 @@
     @apply sm:mr-[15%] flex justify-center content-center
 }
 .list{
-    @apply rounded-md px-1 sm:mr-[4%] sm:text-xl h-7 hover:bg-black hover:text-white sm:w-[22%] md:w-[32%] sm:px-2 sm:rounded-md flex justify-center content-center
+    @apply text-white rounded-md px-1 sm:mr-[4%] sm:text-xl h-7 hover:bg-white hover:text-black sm:w-[22%] md:w-[32%] sm:px-2 sm:rounded-md flex justify-center content-center
 }
 
 .details{
-    @apply px-1 rounded-md sm:ml-[4%] sm:text-xl  hover:bg-black hover:text-white sm:w-[34%] sm:px-2 h-8 sm:rounded-md flex justify-center content-center
+    @apply text-white px-1 rounded-md sm:ml-[4%] sm:text-xl  hover:bg-white hover:text-white sm:w-[34%] sm:px-2 h-8 sm:rounded-md flex justify-center content-center
 }
-
+/* sm, md, lg */
 /* `````````````````````````````````````````````````````````````````````````````````` */
-
+.quote-img{
+    @apply md:ml-[10%] md:mt-[4%] flex
+}
+.quote{
+    @apply ml-[10%] md:ml-0 md:text-7xl md:leading-[120%] md:my-[3%]  text-white
+}
+.quote-img img{
+    @apply ml-[8%] w-0 md:w-[42%] md:ml-[10%]
+}
 .home-items{
     @apply flex mt-[5%] md:ml-[11%] md:w-[80%] rounded-xl bg-white shadow-lg
 }
@@ -37,7 +46,7 @@
     @apply md:my-[6%] mx-auto bg-sky-200 rounded-lg md:mx-[5%] w-[90%]
 }
 .item-name{
-    @apply text-red-500 font-serif md:text-xl lg:text-2xl flex content-center justify-center
+    @apply text-white font-serif md:text-xl lg:text-2xl flex content-center justify-center
 }
 .total-content-home{
     /* @apply  */
@@ -45,29 +54,33 @@
 /* `````````````````````````````````````````````````````````````````````````````````````````` */
 
 .Fastsearch{
-    @apply ml-[9%] mb-[6%] w-[80%] flex content-center justify-center md:mt-[5%] md:ml-[10%] md:mb-[4%]
+    @apply text-white ml-[9%] mb-[6%] w-[80%] flex content-center justify-center md:mt-[5%] md:ml-[10%] md:mb-[4%]
 }
 .Fastsearch div span{
     @apply sm:text-sm md:text-xl flex content-center justify-center
 }
-
+.fastsearch-items{
+    @apply bg-gray-400 text-black rounded-md md:w-[40%] mx-[2%] py-2
+}
 #fast-items-image{
     @apply rounded-2xl ml-[22%] w-[50%] h-[80%] md:ml-[25%]
 }
 .requested-data{
     @apply mt-[5%]
 }
+.requested-data-lists{
+    @apply flex w-[80%] grid grid-cols-4 gap-4
+}
 .requested-list{
-    @apply mx-[26%] 
+    @apply rounded mt-[5%] md:ml-[11%] md:w-[80%] rounded-xl bg-white shadow-lg
 }
 .requested-list img{
     @apply rounded-xl
 }
-.requested-data-lists{
-    @apply flex w-[8%]  
-}
+
+
 .input{
-    @apply mb-[4%] flex content-center justify-center md:ml-[25%] md:w-[40%]
+    @apply text-white mb-[4%] flex content-center justify-center md:ml-[25%] md:w-[40%]
 }
 .search-items{
     @apply flex bg-gray-600 rounded-md my-auto
@@ -83,4 +96,23 @@ label{
 }
 .search-items button{
     @apply md:mr-[2%]
+}
+
+/* `````````````````````````````````````````````````````````````````````````````````````````` */
+
+.table{
+    @apply text-white 
+}
+.Item-details{
+    @apply w-60 ml-[10%] rounded-xl flex-col content-center justify-center 
+}
+.table-img{
+    @apply w-52 rounded-xl
+}
+.head-row{
+    @apply mr-[100%] text-xl
+}
+
+.head-col{
+    @apply px-6
 }
