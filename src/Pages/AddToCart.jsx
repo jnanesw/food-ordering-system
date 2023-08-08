@@ -22,7 +22,7 @@ const AddToCart = ({CartItems}) => {
 
             fetchData();
         }
-    }, [CartItems, apiKey2]);
+    }, [CartItems, apiKey]);
 
     return (
             <div className="table">
