@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import bg from "../assets/img8.jpg"
 import Quote from "../Components/Quote";
 const Home = ({quoteValue})=>{
     const url="https://www.themealdb.com/api/json/v1/1/categories.php";
@@ -23,7 +22,7 @@ const Home = ({quoteValue})=>{
         fetchData();
       }, []);
     return(
-      <div className="">
+      <div className="Home-data">
           <Quote quote={true} />
           <div className="home-items-list">
               {

@@ -1,3 +1,5 @@
+/* Implement a get price instead of extracting every item's price at a time */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -46,7 +48,7 @@
     @apply md:my-[6%] mx-auto bg-sky-200 rounded-lg md:mx-[5%] w-[90%]
 }
 .item-name{
-    @apply text-white font-serif md:text-xl lg:text-2xl flex content-center justify-center
+    @apply text-red-500 font-serif md:text-xl lg:text-2xl flex content-center justify-center
 }
 .total-content-home{
     /* @apply  */

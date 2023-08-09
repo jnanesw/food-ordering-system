@@ -4,18 +4,18 @@ import { useState } from 'react';
 
 const Incrementer = ()=>{
 
-    const [Value, SetValue] = useState(0);
+    const [Value, SetValue] = useState(1);
     const Decrement = ()=>{
-        if (Value >= 1) {
-            SetValue(Value-1);
+        if (Value > 1) {
         }
         
     }
     const Increment = ()=>{
         SetValue(Value+1)
     }
+
     return(
-        <div className='item-name'>
+        <div className='text-white'>
             <span className='cursor-pointer' onClick={Decrement}><RemoveOutlinedIcon /></span>
             <span className='px-2'>{Value}</span>
             <span className='cursor-pointer' onClick={Increment}><AddOutlinedIcon /></span>
