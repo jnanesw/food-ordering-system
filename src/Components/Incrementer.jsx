@@ -7,21 +7,19 @@ const Incrementer = ({SetcartItems, cartItems, item})=>{
     const [Value, SetValue] = useState(1);
     const Decrement = ()=>{
         if (Value > 1) {
+            SetValue(Value-1)
         }
-        SetValue(Value)
         
     }
     const Increment = ()=>{
         SetValue(Value+1)
     }
-    const UpdateQuantity = ()=>{
+
+    useEffect(()=>{
         const ToUpdatedCart = [...cartItems]
         const itemIndx = ToUpdatedCart.findIndex(i=>i.id === item.id);
         ToUpdatedCart[itemIndx].quantity = Value;
         SetcartItems(ToUpdatedCart)
-    }
-    useEffect(()=>{
-        UpdateQuantity()
     },[Value])
     return(
         <div className='text-white'>

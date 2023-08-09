@@ -4,7 +4,16 @@ import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined
 
 const AddToCart = ({CartItems, SetcartItems}) => {
 
-    console.log("Data of price Updated: ", CartItems)
+    const RemoveItem = (id)=>{
+        // console.log("Testing Id: ", id)
+        const ModifiedCart = [...CartItems]
+        const itemIndex = ModifiedCart.findIndex(i=>i.id === id)
+        
+        console.log("Index of remove item: ", ModifiedCart.findIndex(i=>i.id===id))
+        ModifiedCart.splice(itemIndex,1)
+        console.log("Modified Cart: ", ModifiedCart)
+        SetcartItems(ModifiedCart)
+    }
     return (
             <div className="table">
                 <table>
@@ -17,7 +26,6 @@ const AddToCart = ({CartItems, SetcartItems}) => {
                     </tr>
                     </thead>
                     <tbody>
-                    {console.log("ItemsData: ", CartItems)} 
                     {CartItems.map((item, index) => (
                         <tr key={index}>
                             {console.log("item:", item)}
@@ -29,13 +37,12 @@ const AddToCart = ({CartItems, SetcartItems}) => {
                             </td>
 
                             <td>{item.price.toFixed(2)}</td>
-                            {console.log("Type of SetcartItems: ", typeof SetcartItems)}
                             <td>{<Incrementer SetcartItems={SetcartItems} cartItems={CartItems} item={item} />}</td>
-
-                            {console.log("Price Updated from Cart: ", item.price)}
-                            {console.log("Multiplied Value: ", item.price*item.quantity)}
                             <td>{(item.price*item.quantity).toFixed(2)}</td>
-                            <td>{<span><button  ><DeleteForeverOutlinedIcon /></button></span>}</td>
+
+                            <td>{<button onClick={()=>{
+                                RemoveItem(item.id)
+                            }} ><DeleteForeverOutlinedIcon /></button>}</td>
                         </tr>
                     ))}
                     </tbody>
