@@ -7,7 +7,7 @@ import cake from "../assets/cake.jpg"
 import chicken from "../assets/chicken.jpg"
 import sweet from "../assets/sweet.jpg"
 import SearchIcon from '@mui/icons-material/Search';
-const Menu = ({SetcartItems, SetPrice})=>{
+const Menu = ({SetcartItems})=>{
     const [Search, SetSearch] = useState("");
     const [ShowData, setShowData] = useState(false);
     const Update = (event)=>{
@@ -64,8 +64,8 @@ const Menu = ({SetcartItems, SetPrice})=>{
                     <span className="fast-items-text">Sweet</span>
                 </div>
             </div>
-            <div>{Search.length>0? ShowData && <DataRequested search={Search} SetCartItems={SetcartItems} SetPrice={SetPrice} />: 
-            <DataRequested search={""} SetCartItems={SetcartItems} SetPrice={SetPrice} />}</div>
+            <div>{Search.length>0? ShowData && <DataRequested search={Search} SetCartItems={SetcartItems} />: 
+            <DataRequested search={""} SetCartItems={SetcartItems} />}</div>
         </div>
     )
 }

@@ -16,9 +16,11 @@ const DataRequested = ({search, SetCartItems})=>{
     // const apiKey2="d1f70067f78248078e71a58983a18e5f"
     // const apiKey3 = "e1bfe1687e084970bb0af00e14f593e9"
     // const apiKey_1 = "db254b5cd61744d39a2deebd9c361444"
-    const apiKey_2 = "e31374215c8e40b4839ff7bc9fa7ed14"
+    // const apiKey_2 = "e31374215c8e40b4839ff7bc9fa7ed14"
     // const apiKey_3 = "88cbb41354b04d13858d7f377e338113"
-    var url = `https://api.spoonacular.com/food/search?apiKey=${apiKey_2}&query=${search}`;
+    const apiKey_4 = "56f193acdfdb4203849a4f2ccce9f7ca"
+
+    var url = `https://api.spoonacular.com/food/search?apiKey=${apiKey_4}&query=${search}`;
     console.log(url)
 
     const Extract = async (url)=>{
@@ -45,7 +47,7 @@ const DataRequested = ({search, SetCartItems})=>{
 
     const UpdateCartItems = (id, DemoName, link)=>{
         var total_price = 1;
-        const PriceUrl = `https://api.spoonacular.com/recipes/${id}/priceBreakdownWidget.json?apiKey=${apiKey_2}`
+        const PriceUrl = `https://api.spoonacular.com/recipes/${id}/priceBreakdownWidget.json?apiKey=${apiKey_4}`
         const Fetch = async ()=>{
             try{
                 const responsePrice = await fetch(PriceUrl);
@@ -97,8 +99,8 @@ const DataRequested = ({search, SetCartItems})=>{
 
                                 <button onClick={()=>{
                                     if(result.id){
-                                        console.log("Verifying ID-> ", result.id," and price-> ", " Name-> ", result.name," ImageLink-> ", result.image)
-                                        UpdateCartItems(result.id,  result.name, result.image);
+                                        console.log("Verifying ID-> ", result.id, " Name-> ", result.name," ImageLink-> ", result.image)
+                                        UpdateCartItems(result.id, result.name, result.image);
                                     }
                                 }} >Add to cart</button>
                             </div>

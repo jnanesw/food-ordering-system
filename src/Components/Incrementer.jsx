@@ -1,19 +1,28 @@
 import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-const Incrementer = ()=>{
-
+const Incrementer = ({SetcartItems, cartItems, item})=>{
+    console.log("Type of SetcartItems: ", typeof SetcartItems)
     const [Value, SetValue] = useState(1);
     const Decrement = ()=>{
         if (Value > 1) {
         }
+        SetValue(Value)
         
     }
     const Increment = ()=>{
         SetValue(Value+1)
     }
-
+    const UpdateQuantity = ()=>{
+        const ToUpdatedCart = [...cartItems]
+        const itemIndx = ToUpdatedCart.findIndex(i=>i.id === item.id);
+        ToUpdatedCart[itemIndx].quantity = Value;
+        SetcartItems(ToUpdatedCart)
+    }
+    useEffect(()=>{
+        UpdateQuantity()
+    },[Value])
     return(
         <div className='text-white'>
             <span className='cursor-pointer' onClick={Decrement}><RemoveOutlinedIcon /></span>

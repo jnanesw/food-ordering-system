@@ -10,17 +10,17 @@ import { useState } from "react";
 
 const Navbar = ()=>{
     const [cartItems, SetcartItems] = useState([])
-    const [Price, SetPrice] = useState(0);
+    // const [Price, SetPrice] = useState(0);
     return(
         <div className="bg-[url('./assets/bg-hotdog.jpg')] bg-cover md:h-full md:w-full">
             <Router>
                 <Header />
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/menu" element={<Menu SetcartItems={SetcartItems} SetPrice={SetPrice} />} />
+                    <Route path="/menu" element={<Menu SetcartItems={SetcartItems} />} />
                     <Route path="/about-us" element={<AboutUs />} />
                     <Route path="/contact-us" element={<Contact />} />
-                    <Route path="/add-to-cart" element={cartItems.length>0?<AddToCart CartItems={cartItems} price={Price} />:
+                    <Route path="/add-to-cart" element={cartItems.length>0?<AddToCart CartItems={cartItems} SetcartItems={SetcartItems} />:
                     <h1 className="text-white">The cart is Empty</h1>} />
                     
                 </Routes>

@@ -9,9 +9,10 @@ const ExtractPrice = ({Id, Doprice})=>{
     // const apiKey3 = "e1bfe1687e084970bb0af00e14f593e9"
     // const apiKey_1 = "db254b5cd61744d39a2deebd9c361444"
     // const apiKey_2 = "88cbb41354b04d13858d7f377e338113"
-    const apiKey_3 = "e31374215c8e40b4839ff7bc9fa7ed14"
+    // const apiKey_3 = "e31374215c8e40b4839ff7bc9fa7ed14"
+    const apiKey_4 = "56f193acdfdb4203849a4f2ccce9f7ca"
 
-    const PriceUrl = `https://api.spoonacular.com/recipes/${Id}/priceBreakdownWidget.json?apiKey=${apiKey_3}`
+    const PriceUrl = `https://api.spoonacular.com/recipes/${Id}/priceBreakdownWidget.json?apiKey=${apiKey_4}`
 
     const Fetch = async ()=>{
         try{
