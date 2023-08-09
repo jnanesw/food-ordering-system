@@ -35,7 +35,7 @@ const ExtractPrice = ({Id, Doprice})=>{
     }
     useEffect(()=>{
         Fetch();
-    },[PriceUrl])
+    })
     if(Price === undefined || Price<=0){
         return "loading..."
     }
