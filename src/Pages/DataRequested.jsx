@@ -85,19 +85,19 @@ const DataRequested = ({search, SetCartItems})=>{
                             <div  key={index} className="requested-list">
                                 <img src={result.image} alt="img" className="item-image cursor-pointer" />
                                 <h1 className="item-name">{result.name}</h1>
-                                {console.log("WantedPrice: ",WantedPriceId)}
+                                
 
                                 {WantedPriceId === result.id?(<p className="item-name">Price:{
                                     <ExtractPrice Id={WantedPriceId} />
 
                                 }</p>):
-                                (<button onClick={()=>{
+                                (<button className="cart-buttons" onClick={()=>{
                                     if(result.id){
                                         UpdateWantedPriceItem(result.id);
                                     }
                                 }}>Get the Price</button>)}<br />
 
-                                <button onClick={()=>{
+                                <button className="cart-buttons md:mb-[5%]" onClick={()=>{
                                     if(result.id){
                                         console.log("Verifying ID-> ", result.id, " Name-> ", result.name," ImageLink-> ", result.image)
                                         UpdateCartItems(result.id, result.name, result.image);

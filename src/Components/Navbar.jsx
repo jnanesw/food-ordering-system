@@ -15,7 +15,7 @@ const Navbar = ()=>{
         <div className="bg-[url('./assets/bg-hotdog.jpg')] bg-cover md:h-full md:w-full">
             <Router>
                 <Header />
-                <Routes>
+                <Routes className="routes">
                     <Route path="/" element={<Home />} />
                     <Route path="/menu" element={<Menu SetcartItems={SetcartItems} />} />
                     <Route path="/about-us" element={<AboutUs />} />

@@ -5,11 +5,12 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lumanosimo&family=Playfair+Display:ital,wght@1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@200&display=swap');
+/* NAVBAR CSS */
 .navbar{
     @apply font-bungee text-black h-20 px-2 py-1 rounded flex justify-end
 }
 .content{
-    @apply flex justify-center content-center sm:mr-[5%] mt-[3%] md:mt-[1%] md:text-xl
+    @apply flex justify-center content-center mt-[3%] md:mt-[1%] md:text-xl
 }
 .lists{
     @apply flex justify-center content-center
@@ -21,28 +22,28 @@
     @apply sm:mr-[15%] flex justify-center content-center
 }
 .list{
-    @apply text-white rounded-md px-1 sm:mr-[4%] sm:text-xl h-7 hover:bg-white hover:text-black sm:w-[22%] md:w-[32%] sm:px-2 sm:rounded-md flex justify-center content-center
+    @apply text-white rounded-md px-1 sm:mr-[4%] h-7 hover:bg-white hover:text-black sm:w-[22%] md:w-[32%] sm:px-2 sm:rounded-md flex justify-center content-center
 }
 
 .details{
-    @apply text-white px-1 rounded-md sm:ml-[4%] sm:text-xl  hover:bg-white hover:text-white sm:w-[34%] sm:px-2 h-8 sm:rounded-md flex justify-center content-center
+    @apply text-white px-1 rounded-md sm:ml-[4%] sm:text-xl  hover:bg-white hover:text-[rgba(238,149,0,255)] sm:w-[34%] sm:px-2 h-8 sm:rounded-md flex justify-center content-center
 }
 /* sm, md, lg */
 /* `````````````````````````````````````````````````````````````````````````````````` */
 .quote-img{
-    @apply md:ml-[10%] md:mt-[4%] flex
+    @apply ml-[10%] md:ml-[15%] md:mt-[4%] flex
 }
 .quote{
-    @apply ml-[10%] md:ml-0 md:text-7xl md:leading-[120%] md:my-[3%]  text-white
+    @apply text-2xl ml-[10%] md:ml-0 sm:text-3xl md:text-4xl lg:text-6xl lg:leading-[128%] md:my-[3%]  text-white
 }
 .quote-img img{
-    @apply ml-[8%] w-0 md:w-[42%] md:ml-[10%]
+    @apply ml-[8%] w-[25%] sm:w-[30%] md:w-[34%] xl:w-[41%] lg:ml-[12%] 
 }
 .home-items{
-    @apply flex mt-[5%] md:ml-[11%] md:w-[80%] rounded-xl bg-white shadow-lg
+    @apply w-[50%] ml-[20%] sm:w-[65%] flex mt-[5%] md:ml-[11%] md:w-[80%] rounded-xl bg-white shadow-lg
 }
 .home-items-list{
-    @apply grid grid-cols-4 gap-4
+    @apply grid-cols-1 sm:grid-cols-2 gap-4 grid md:grid-cols-3 gap-4 lg:grid-cols-4 gap-4
 }
 .item-image{
     @apply md:my-[6%] mx-auto bg-sky-200 rounded-lg md:mx-[5%] w-[90%]
@@ -68,10 +69,10 @@
     @apply rounded-2xl ml-[22%] w-[50%] h-[80%] md:ml-[25%]
 }
 .requested-data{
-    @apply mt-[5%]
+    @apply mt-[3%] md:mt-[5%] 
 }
 .requested-data-lists{
-    @apply flex w-[80%] grid grid-cols-4 gap-4
+    @apply flex w-[100%] grid grid-cols-2 gap-2 md:grid grid-cols-3 gap-3 lg:grid grid-cols-4 gap-4
 }
 .requested-list{
     @apply rounded mt-[5%] md:ml-[11%] md:w-[80%] rounded-xl bg-white shadow-lg
@@ -79,16 +80,21 @@
 .requested-list img{
     @apply rounded-xl
 }
-
+.cart-buttons{
+    @apply text-sm text-white bg-[rgba(212,52,0,255)] hover:bg-[rgba(238,149,0,255)] md:w-[70%] md:text-xl  md:ml-[14%] md:rounded-xl md:font-black  justify-center content-center md:mt-[2%] md:mb-[2%]
+}
+/* .cart-button-2{
+    @apply justify-center content-center 
+} */
 
 .input{
-    @apply text-white mb-[4%] flex content-center justify-center md:ml-[25%] md:w-[40%]
+    @apply text-white text-sm font-thin mb-[4%] flex content-center justify-center md:ml-[25%] md:w-[40%] md:text-xl font-black
 }
 .search-items{
     @apply flex bg-gray-600 rounded-md my-auto
 }
 .search{
-    @apply md:mr-[4%] md:h-10 md:w-64 w-full rounded-md 
+    @apply text-black md:mr-[4%] md:h-10 md:w-64 w-full rounded-md 
 }
 .search::placeholder{
     @apply ml-[5%]
@@ -118,3 +124,8 @@ label{
 .head-col{
     @apply px-6
 }
+
+/* `````````````````````````````````````````````````````````````````````````````````````````` */
+
+
+

@@ -20,6 +20,7 @@ const Incrementer = ({SetcartItems, cartItems, item})=>{
         const itemIndx = ToUpdatedCart.findIndex(i=>i.id === item.id);
         ToUpdatedCart[itemIndx].quantity = Value;
         SetcartItems(ToUpdatedCart)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[Value])
     return(
         <div className='text-white'>
