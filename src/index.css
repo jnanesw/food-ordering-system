@@ -7,10 +7,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@200&display=swap');
 /* NAVBAR CSS */
 .navbar{
-    @apply font-bungee text-black h-20 px-2 py-1 rounded flex justify-end
+    @apply font-bungee text-black h-12 sm:h-16 md:h-[11%] px-2 py-1 rounded flex justify-end
 }
 .content{
-    @apply flex justify-center content-center mt-[3%] md:mt-[1%] md:text-xl
+    @apply md:mr-[3%] flex justify-center content-center mt-[3%] md:mt-[1%] md:text-xl
 }
 .lists{
     @apply flex justify-center content-center
@@ -34,22 +34,22 @@
     @apply ml-[10%] md:ml-[15%] md:mt-[4%] flex
 }
 .quote{
-    @apply text-2xl ml-[10%] md:ml-0 sm:text-3xl md:text-4xl lg:text-6xl lg:leading-[128%] md:my-[3%]  text-white
+    @apply text-xl ml-[10%] md:ml-0 sm:text-3xl md:text-4xl lg:text-6xl lg:leading-[128%] md:my-[3%]  text-white
 }
 .quote-img img{
-    @apply ml-[8%] w-[25%] sm:w-[30%] md:w-[34%] xl:w-[41%] lg:ml-[12%] 
+    @apply ml-[8%] w-[29%] sm:w-[30%] md:w-[34%] xl:w-[41%] lg:ml-[12%] lg:mb-[1%]
 }
 .home-items{
     @apply w-[50%] ml-[20%] sm:w-[65%] flex mt-[5%] md:ml-[11%] md:w-[80%] rounded-xl bg-white shadow-lg
 }
 .home-items-list{
-    @apply grid-cols-1 sm:grid-cols-2 gap-4 grid md:grid-cols-3 gap-4 lg:grid-cols-4 gap-4
+    @apply grid-cols-1 sm:grid-cols-2 grid md:grid-cols-3 gap-4 lg:grid-cols-4 
 }
 .item-image{
     @apply md:my-[6%] mx-auto bg-sky-200 rounded-lg md:mx-[5%] w-[90%]
 }
 .item-name{
-    @apply text-red-500 font-serif md:text-xl lg:text-2xl flex content-center justify-center
+    @apply text-black opacity-80 border-b-4 border-y-red-200 rounded-xl font-serif md:text-xl lg:text-2xl lg:ml-[2%] flex content-center justify-center
 }
 .total-content-home{
     /* @apply  */
@@ -57,13 +57,13 @@
 /* `````````````````````````````````````````````````````````````````````````````````````````` */
 
 .Fastsearch{
-    @apply text-white ml-[9%] mb-[6%] w-[80%] flex content-center justify-center md:mt-[5%] md:ml-[10%] md:mb-[4%]
+    @apply grid-cols-3 lg:grid-cols-5 text-white ml-[9%] mb-[6%] w-[80%] flex content-center justify-center md:mt-[5%] md:ml-[10%] md:mb-[4%]
 }
 .Fastsearch div span{
     @apply sm:text-sm md:text-xl flex content-center justify-center
 }
 .fastsearch-items{
-    @apply bg-gray-400 text-black rounded-md md:w-[40%] mx-[2%] py-2
+    @apply bg-gray-400 w-[20%] text-black rounded-md md:w-[40%] mx-[2%] py-2 hover:shadow-md hover:shadow-white
 }
 #fast-items-image{
     @apply rounded-2xl ml-[22%] w-[50%] h-[80%] md:ml-[25%]
@@ -72,26 +72,26 @@
     @apply mt-[3%] md:mt-[5%] 
 }
 .requested-data-lists{
-    @apply flex w-[100%] grid grid-cols-2 gap-2 md:grid grid-cols-3 gap-3 lg:grid grid-cols-4 gap-4
+    @apply w-[80%] grid grid-cols-2 ml-[11%] md:grid-cols-3 lg:grid-cols-4 gap-4
 }
 .requested-list{
-    @apply rounded mt-[5%] md:ml-[11%] md:w-[80%] rounded-xl bg-white shadow-lg
+    @apply shadow-lg hover:shadow-md hover:shadow-white h-[100%] rounded mt-[5%] md:ml-[11%] md:w-[80%] md:rounded-xl bg-white 
 }
 .requested-list img{
     @apply rounded-xl
 }
 .cart-buttons{
-    @apply text-sm text-white bg-[rgba(212,52,0,255)] hover:bg-[rgba(238,149,0,255)] md:w-[70%] md:text-xl  md:ml-[14%] md:rounded-xl md:font-black  justify-center content-center md:mt-[2%] md:mb-[2%]
+    @apply text-sm mb-[4%] w-[80%] rounded-md ml-[10%] font-black sm:h-7 sm:mt-[4%] text-white bg-[rgba(212,52,0,255)] hover:bg-[rgba(238,149,0,255)] hover:shadow-md hover:shadow-black md:w-[70%] md:text-lg  md:ml-[14%] md:rounded-lg md:font-black  justify-center content-center md:mt-[2%] md:mb-[2%]
 }
 /* .cart-button-2{
     @apply justify-center content-center 
 } */
 
 .input{
-    @apply text-white text-sm font-thin mb-[4%] flex content-center justify-center md:ml-[25%] md:w-[40%] md:text-xl font-black
+    @apply mt-[5%] text-white text-sm mb-[4%] flex content-center justify-center md:ml-[25%] md:w-[40%] md:text-xl font-black
 }
 .search-items{
-    @apply flex bg-gray-600 rounded-md my-auto
+    @apply flex bg-gray-600 rounded-md my-auto hover:shadow-md
 }
 .search{
     @apply text-black md:mr-[4%] md:h-10 md:w-64 w-full rounded-md 
@@ -108,22 +108,7 @@ label{
 
 /* `````````````````````````````````````````````````````````````````````````````````````````` */
 
-.table{
-    @apply text-white 
-}
-.Item-details{
-    @apply w-60 ml-[10%] rounded-xl flex-col content-center justify-center 
-}
-.table-img{
-    @apply w-52 rounded-xl
-}
-.head-row{
-    @apply mr-[100%] text-xl
-}
 
-.head-col{
-    @apply px-6
-}
 
 /* `````````````````````````````````````````````````````````````````````````````````````````` */
 

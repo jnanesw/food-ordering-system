@@ -2,6 +2,7 @@
 import Incrementer from "../Components/Incrementer";
 import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
 
+
 const AddToCart = ({CartItems, SetcartItems}) => {
 
     const RemoveItem = (id)=>{
@@ -15,9 +16,9 @@ const AddToCart = ({CartItems, SetcartItems}) => {
         SetcartItems(ModifiedCart)
     }
     return (
-            <div className="table">
+            <div className="table ">
                 <table>
-                    <thead className="head-row">
+                    <thead className="head-row text-xl">
                     <tr>
                         <th className="head-col-1">Item</th>
                         <th className="head-col">Price</th>
@@ -28,7 +29,6 @@ const AddToCart = ({CartItems, SetcartItems}) => {
                     <tbody>
                     {CartItems.map((item, index) => (
                         <tr key={index}>
-                            {console.log("item:", item)}
                             <td>
                                 <div className="Item-details">
                                     <img src={item.image} alt="img" className="table-img" />

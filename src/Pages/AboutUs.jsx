@@ -1,7 +1,7 @@
 
 const AboutUs = ()=>{
     return(
-        <p className="text-center text-3xl">AboutUs Page</p>
+        <p className="text-center text-3xl">Developing...</p>
     )
 }
 

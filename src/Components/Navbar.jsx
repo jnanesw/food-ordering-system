@@ -12,7 +12,7 @@ const Navbar = ()=>{
     const [cartItems, SetcartItems] = useState([])
     // const [Price, SetPrice] = useState(0);
     return(
-        <div className="bg-[url('./assets/bg-hotdog.jpg')] bg-cover md:h-full md:w-full">
+        <div className="bg-gradient-to-r from-gray-300 to-custom bg-cover h-full w-full">
             <Router>
                 <Header />
                 <Routes className="routes">

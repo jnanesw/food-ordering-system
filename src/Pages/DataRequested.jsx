@@ -1,16 +1,11 @@
 
 import { useEffect, useState } from "react";
 import ExtractPrice from "../Components/ExtractPrice";
-// import AddToCart from "./AddToCart";
 const DataRequested = ({search, SetCartItems})=>{
 
     const [Response, SetResponse] = useState([]);
     const [WantedPriceId, SetWantedPriceId] = useState("")
     
-    // const [ cartItems, SetCartItems ] = useState([]);
-    // const [total_price, SetPrice] = useState("")
-    // const [item_name, SetName] = useState("")
-    // const [Image_link, SetLink] = useState('')
 
     // const apiKey1="933fb57e83404fb6a4fa1f6735058652"
     // const apiKey2="d1f70067f78248078e71a58983a18e5f"
@@ -91,7 +86,7 @@ const DataRequested = ({search, SetCartItems})=>{
                                     <ExtractPrice Id={WantedPriceId} />
 
                                 }</p>):
-                                (<button className="cart-buttons" onClick={()=>{
+                                (<button className="cart-buttons lg:mt-[8%]" onClick={()=>{
                                     if(result.id){
                                         UpdateWantedPriceItem(result.id);
                                     }

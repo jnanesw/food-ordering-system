@@ -3,7 +3,7 @@ import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 
 const Header = ()=>{
     return(
-        <header className="navbar">
+        <header className="navbar bg-black opacity-80">
             <div className="content">
                 <div className="navbar-list">
                     <ul className="lists">

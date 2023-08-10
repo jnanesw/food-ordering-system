@@ -13,6 +13,9 @@ module.exports = {
       },
       backgroundImage:{
         'glass': ["./src/assets/bg-glass.jpg"]
+      },
+      colors: {
+        'custom': 'rgb(236, 135, 5)',
       }
     },
   },

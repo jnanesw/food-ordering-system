@@ -1,7 +1,7 @@
 
 const Contact = ()=>{
     return(
-        <p className="text-center text-3xl">Contact Page</p>
+        <p className="text-center text-3xl">Developing...</p>
     )
 }
 

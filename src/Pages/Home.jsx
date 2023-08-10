@@ -22,7 +22,7 @@ const Home = ({quoteValue})=>{
         fetchData();
       }, []);
     return(
-      <div className="Home-data">
+      <div className="Home-data ">
           <Quote quote={true} />
           <div className="home-items-list">
               {

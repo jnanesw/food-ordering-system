@@ -10,25 +10,29 @@ import SearchIcon from '@mui/icons-material/Search';
 const Menu = ({SetcartItems})=>{
     const [Search, SetSearch] = useState("");
     const [ShowData, setShowData] = useState(false);
+    const [isLoading, SetisLoading] = useState(false)
+
     const Update = (event)=>{
         console.log(event.target.value)
         SetSearch(event.target.value)
     }
-    // const handleSearch = () => {
-    //     setShowData(true);
-    // };
+
     const UpdateFastSearsch = (event)=>{
         let content;
+        SetisLoading(true);
         if (event.target.tagName === "SPAN") {
             content = event.target.textContent;
+            SetisLoading(false)
         }else if (event.target.tagName === "DIV") {
             const spanElement = event.target.querySelector("span");
             content = spanElement.textContent;
+            SetisLoading(false)
         }
         else if(event.target.tagName === "IMG" ){
             const parentDiv = event.target.parentElement;
             const spanElement = parentDiv.querySelector("span");
             content = spanElement.textContent;
+            SetisLoading(false)
         }
         SetSearch(content);
         setShowData(true);
@@ -64,8 +68,8 @@ const Menu = ({SetcartItems})=>{
                     <span className="fast-items-text">Sweet</span>
                 </div>
             </div>
-            <div>{Search.length>0? ShowData && <DataRequested search={Search} SetCartItems={SetcartItems} />: 
-            <DataRequested search={""} SetCartItems={SetcartItems} />}</div>
+            <div>{isLoading?(<p>loading...</p>):(Search.length>0? ShowData && <DataRequested search={Search} SetCartItems={SetcartItems} />: 
+            <DataRequested search={""} SetCartItems={SetcartItems} />)}</div>
         </div>
     )
 }
