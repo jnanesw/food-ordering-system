@@ -7,13 +7,10 @@ const AddToCart = ({CartItems, SetcartItems}) => {
     // const [Sum, SetSum] = useState(0)
     let Sum=0;
     const RemoveItem = (id)=>{
-        // console.log("Testing Id: ", id)
         const ModifiedCart = [...CartItems]
         const itemIndex = ModifiedCart.findIndex(i=>i.id === id)
         
-        console.log("Index of remove item: ", ModifiedCart.findIndex(i=>i.id===id))
         ModifiedCart.splice(itemIndex,1)
-        console.log("Modified Cart: ", ModifiedCart)
         SetcartItems(ModifiedCart)
     }
 
