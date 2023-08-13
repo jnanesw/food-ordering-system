@@ -1,8 +1,7 @@
 
-import { useState } from "react";
+
 import Incrementer from "../Components/Incrementer";
 import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
-
 
 const AddToCart = ({CartItems, SetcartItems}) => {
     // const [Sum, SetSum] = useState(0)
@@ -17,15 +16,16 @@ const AddToCart = ({CartItems, SetcartItems}) => {
         console.log("Modified Cart: ", ModifiedCart)
         SetcartItems(ModifiedCart)
     }
+
     const UpdateSubTotal=(item)=>{
         Sum = Sum+(item.price*item.quantity)
     }
     return (
-        <div className="flex">
+        <div className="flex-col md:flex-row">
             <div className="table ">
                 <table>
-                    <thead className="head-row text-xl">
-                    <tr>
+                    <thead className="thead">
+                    <tr className="head-row">
                         <th className="head-col-1">Item</th>
                         <th className="head-col">Price</th>
                         <th className="head-col">Quantity</th>

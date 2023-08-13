@@ -6,21 +6,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@200&display=swap');
 
 .table{
-    @apply text-black lg:ml-[4%] lg:mt-[2%]
+    @apply ml-[2%] mt-[1%] text-black lg:ml-[4%] lg:mt-[2%]
+}
+.thead{
+    @apply text-sm sm:text-base lg:text-xl 
 }
 .Item-details{
     @apply lg:w-80 lg:ml-[10%] rounded-xl flex-col content-center justify-center 
 }
 .table-img{
-    @apply w-52 rounded-xl
+    @apply w-[80%]  sm:w-40 rounded-xl
+}
+.head-col-1{
+
+}
+.head-col{
+    @apply w-[50%] sm:w-auto
 }
 .head-row{
-    @apply bg-black bg-opacity-70 text-white mx-[20%] rounded-xl
+    @apply bg-black bg-opacity-70 text-white rounded-xl
 }
 
-.head-col{
-    @apply px-6
-}
 td{
-    @apply lg:text-lg font-black lg:mt-8 h-60 px-2
+    @apply lg:text-lg font-black lg:mt-8 h-60 
 }
+
+/* =============================================================================================== */
+/* INCREMENTER */

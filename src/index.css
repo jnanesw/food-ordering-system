@@ -22,11 +22,11 @@
     @apply sm:mr-[15%] flex justify-center content-center
 }
 .list{
-    @apply text-white rounded-md px-1 sm:mr-[4%] h-7 hover:bg-white hover:text-black sm:w-[22%] md:w-[32%] sm:px-2 sm:rounded-md flex justify-center content-center
+    @apply h-5 mt-1 text-white rounded-md sm:mr-[4%] sm:h-7 hover:bg-white hover:text-black sm:w-[22%] md:w-[32%] px-1 sm:px-2 sm:px-2 sm:rounded-md flex justify-center content-center
 }
 
 .details{
-    @apply text-white px-1 rounded-md sm:ml-[4%] sm:text-xl  hover:bg-white hover:text-[rgba(238,149,0,255)] sm:w-[34%] sm:px-2 h-8 sm:rounded-md flex justify-center content-center
+    @apply text-white px-1 rounded-md sm:text-xl  hover:bg-white hover:text-[rgba(238,149,0,255)] h-4 sm:w-[32%] md:w-[34%] sm:mr-[3%] sm:px-2 sm:h-6 sm:rounded-md flex justify-center content-center
 }
 /* sm, md, lg */
 /* `````````````````````````````````````````````````````````````````````````````````` */
@@ -81,7 +81,7 @@
     @apply rounded-xl
 }
 .cart-buttons{
-    @apply text-sm mb-[4%] w-[80%] rounded-md ml-[10%] font-black sm:h-7 sm:mt-[4%] text-white bg-[rgba(212,52,0,255)] hover:bg-[rgba(238,149,0,255)] hover:shadow-md hover:shadow-black md:w-[70%] md:text-lg  md:ml-[14%] md:rounded-lg md:font-black  justify-center content-center md:mt-[2%] md:mb-[2%]
+    @apply text-sm mb-[4%] w-[80%] rounded-md ml-[10%] font-black sm:h-7 sm:mt-[4%] text-white bg-[rgba(212,52,0,255)] hover:bg-[rgba(238,149,0,255)] hover:shadow-md hover:shadow-black md:w-[70%] md:text-sm lg:text-base xl:text-lg  md:ml-[14%] md:rounded-lg md:font-black  justify-center content-center md:mt-[2%] md:mb-[2%]
 }
 /* .cart-button-2{
     @apply justify-center content-center 

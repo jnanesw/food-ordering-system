@@ -23,10 +23,10 @@ const Incrementer = ({SetcartItems, cartItems, item})=>{
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[Value])
     return(
-        <div className='text-white'>
-            <span className='cursor-pointer' onClick={Decrement}><RemoveOutlinedIcon /></span>
-            <span className='px-2'>{Value}</span>
-            <span className='cursor-pointer' onClick={Increment}><AddOutlinedIcon /></span>
+        <div className='text-white incrementer'>
+            <span className='change-value change-value cursor-pointer' onClick={Decrement}><RemoveOutlinedIcon /></span>
+            <span className='change-value px-2'>{Value}</span>
+            <span className='change-value cursor-pointer' onClick={Increment}><AddOutlinedIcon /></span>
         </div>
     )
 }
