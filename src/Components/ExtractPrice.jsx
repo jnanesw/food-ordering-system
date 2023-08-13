@@ -19,12 +19,10 @@ const ExtractPrice = ({Id, Doprice})=>{
             const responsePrice = await fetch(PriceUrl);
             if(responsePrice.ok){
                 let data=await responsePrice.json();
-                console.log("Inside Try price: ", data.totalCost)
                 SetPrice(data.totalCost)
                 if(Doprice){
                     Doprice(Price)
                 }
-                console.log("Data: ",data)
             }
             else{
                 console.log("Error inside TRY", Id)
@@ -40,8 +38,7 @@ const ExtractPrice = ({Id, Doprice})=>{
     if(Price === undefined || Price<=0){
         return "loading..."
     }
-    // console.log("Type of from Etract price: ", typeof Price);
-    // Item.price = Price;
+
 
     return Price;
 }

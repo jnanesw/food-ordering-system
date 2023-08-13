@@ -3,7 +3,6 @@ import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import { useEffect, useState } from 'react';
 
 const Incrementer = ({SetcartItems, cartItems, item})=>{
-    console.log("Type of SetcartItems: ", typeof SetcartItems)
     const [Value, SetValue] = useState(1);
     const Decrement = ()=>{
         if (Value > 1) {

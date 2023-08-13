@@ -16,7 +16,6 @@ const DataRequested = ({search, SetCartItems})=>{
     const apiKey_4 = "56f193acdfdb4203849a4f2ccce9f7ca"
 
     var url = `https://api.spoonacular.com/food/search?apiKey=${apiKey_4}&query=${search}`;
-    console.log(url)
 
     const Extract = async (url)=>{
         const response = await fetch(url)
@@ -48,8 +47,6 @@ const DataRequested = ({search, SetCartItems})=>{
                 const responsePrice = await fetch(PriceUrl);
                 if(responsePrice.ok){
                     let data=await responsePrice.json();
-                    console.log("Inside Try price: ", data.totalCost, " and ", total_price)
-                    console.log("Data: ",data)
                     total_price = data.totalCost
                     SetCartItems((PrevcartItems)=>[...PrevcartItems, {"id":id, "price":total_price, "name":DemoName, "image":link, "quantity":1}])
                 }
@@ -66,9 +63,7 @@ const DataRequested = ({search, SetCartItems})=>{
     const UpdateWantedPriceItem = (id)=>{
         SetWantedPriceId(id);
     }
-    
-    console.log("Data From outside: ",Response)
-    // var total_price=0;
+
     return(
         <div>
             <div className="requested-data ">
@@ -94,7 +89,6 @@ const DataRequested = ({search, SetCartItems})=>{
 
                                 <button className="cart-buttons md:mb-[5%]" onClick={()=>{
                                     if(result.id){
-                                        console.log("Verifying ID-> ", result.id, " Name-> ", result.name," ImageLink-> ", result.image)
                                         UpdateCartItems(result.id, result.name, result.image);
                                     }
                                 }} >Add to cart</button>
